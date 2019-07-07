@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="July,">
+  <meta name="keywords" content="Program,">
 
 
 
@@ -87,14 +87,14 @@
 
 
 <meta name="description" content="本篇博客介绍了一种简单动画函数的封装。它作为一个包（插件）可以之间作为js文件引入使用。">
-<meta name="keywords" content="July">
+<meta name="keywords" content="Program">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简简单动画函数的封装">
 <meta property="og:url" content="https://github.com/lanyangliu/2019/07/06/简单动画函数的封装/index.html">
 <meta property="og:site_name" content="刘兰阳">
 <meta property="og:description" content="本篇博客介绍了一种简单动画函数的封装。它作为一个包（插件）可以之间作为js文件引入使用。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-07T00:29:23.758Z">
+<meta property="og:updated_time" content="2019-07-07T13:09:32.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简简单动画函数的封装">
 <meta name="twitter:description" content="本篇博客介绍了一种简单动画函数的封装。它作为一个包（插件）可以之间作为js文件引入使用。">
@@ -320,28 +320,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/lanyangliu.io/categories/Program/" itemprop="url" rel="index">
-                    <span itemprop="name">Program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -369,7 +347,8 @@
       
 
       
-        <p>本篇博客介绍了一种简单动画函数的封装。它作为一个包（插件）可以之间作为js文件引入使用。<a id="more"></a></p>
+        <p>本篇博客介绍了一种简单动画函数的封装。它作为一个包（插件）可以之间作为js文件引入使用。</p>
+<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> animate(obj, target, callback) &#123;</span><br><span class="line">    clearInterval(obj.timer);</span><br><span class="line">    obj.timer = setInterval(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        var step = (target - obj.offsetLeft) / 10;</span><br><span class="line">        step = step &gt; 0 ? Math.ceil(step) : Math.floor(step);</span><br><span class="line">        <span class="keyword">if</span> (obj.offsetLeft == target) &#123;</span><br><span class="line">            clearInterval(obj.timer);</span><br><span class="line">            callback &amp;&amp;callback();</span><br><span class="line">        &#125;</span><br><span class="line">        obj.style.left = obj.offsetLeft + step + <span class="string">'px'</span>;</span><br><span class="line">    &#125;, 15)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -389,7 +368,7 @@
       
         <div class="post-tags">
           
-            <a href="/lanyangliu.io/tags/July/" rel="tag"># July</a>
+            <a href="/lanyangliu.io/tags/Program/" rel="tag"># Program</a>
           
         </div>
       
@@ -480,21 +459,12 @@
               
                 <a href="/lanyangliu.io/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/lanyangliu.io/categories/index.html">
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
             
 
             
