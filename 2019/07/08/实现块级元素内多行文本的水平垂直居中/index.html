@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Program,">
 
 
 
@@ -86,14 +86,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://github.com/lanyangliu/about/index.html">
+<meta name="description" content="概述：本篇博客介绍了如何使用display:table 以及 display:table-cell来实现块级元素内多行文本水平垂直居中的一种有效方法。">
+<meta name="keywords" content="Program">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现块级元素内多行文本的水平垂直居中">
+<meta property="og:url" content="https://github.com/lanyangliu/2019/07/08/实现块级元素内多行文本的水平垂直居中/index.html">
 <meta property="og:site_name" content="刘兰阳">
+<meta property="og:description" content="概述：本篇博客介绍了如何使用display:table 以及 display:table-cell来实现块级元素内多行文本水平垂直居中的一种有效方法。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-05T11:28:08.731Z">
+<meta property="og:updated_time" content="2019-07-08T02:28:18.106Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="实现块级元素内多行文本的水平垂直居中">
+<meta name="twitter:description" content="概述：本篇博客介绍了如何使用display:table 以及 display:table-cell来实现块级元素内多行文本水平垂直居中的一种有效方法。">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/lanyangliu/about/">
+  <link rel="canonical" href="https://github.com/lanyangliu/2019/07/08/实现块级元素内多行文本的水平垂直居中/">
 
 
 
 
 
-  <title>about | 刘兰阳</title>
+  <title>实现块级元素内多行文本的水平垂直居中 | 刘兰阳</title>
   
 
 
@@ -264,33 +268,147 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/lanyangliu/lanyangliu.io/2019/07/08/实现块级元素内多行文本的水平垂直居中/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lanyangliu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/lanyangliu.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘兰阳">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">实现块级元素内多行文本的水平垂直居中</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-08T10:27:39+08:00">
+                2019-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>概述：本篇博客介绍了如何使用display:table 以及 display:table-cell来实现块级元素内多行文本水平垂直居中的一种有效方法。</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .parent &#123;</span><br><span class="line">            display: table;</span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            text-align: center;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .son &#123;</span><br><span class="line">            display: table-cell;</span><br><span class="line">            height: 200px;</span><br><span class="line">            background-color: yellow;</span><br><span class="line">            vertical-align: middle;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=<span class="string">"parent"</span>&gt;</span><br><span class="line">        &lt;p class=<span class="string">"son"</span>&gt;</span><br><span class="line">            湘江战役关系中央红军生死存亡，红军将士面对国民党军的绝对优势兵力，</span><br><span class="line">            以鲜血和生命突破了第四道封锁线。中央广播电视总台“长征路万里行”移动</span><br><span class="line">            直播报道团队由湖南来到广西，寻访85年前中央红军血战湘江的壮烈历程。</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/lanyangliu.io/tags/Program/" rel="tag"># Program</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/lanyangliu.io/2019/07/08/实现块级元素内图片的垂直居中（简捷方法）/" rel="next" title="实现块级元素内图片的垂直居中（简捷方法）">
+                <i class="fa fa-chevron-left"></i> 实现块级元素内图片的垂直居中（简捷方法）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
