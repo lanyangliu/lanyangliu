@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="nodejs,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -86,18 +86,13 @@
 
 
 
-<meta name="description" content="概述：nodejs fs模块（文件模块） 读取，删除，追加，删除文件等等">
-<meta name="keywords" content="nodejs">
-<meta property="og:type" content="article">
-<meta property="og:title" content="fs模块">
-<meta property="og:url" content="https://github.com/lanyangliu/2019/07/06/nodejs fs模块/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="刘兰阳">
+<meta property="og:url" content="https://github.com/lanyangliu/tags/Vue/index.html">
 <meta property="og:site_name" content="刘兰阳">
-<meta property="og:description" content="概述：nodejs fs模块（文件模块） 读取，删除，追加，删除文件等等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-13T12:46:04.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fs模块">
-<meta name="twitter:description" content="概述：nodejs fs模块（文件模块） 读取，删除，追加，删除文件等等">
+<meta name="twitter:title" content="刘兰阳">
 
 
 
@@ -127,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/lanyangliu/2019/07/06/nodejs fs模块/">
+  <link rel="canonical" href="https://github.com/lanyangliu/tags/Vue/">
 
 
 
 
 
-  <title>fs模块 | 刘兰阳</title>
+  <title>Tag: Vue | 刘兰阳</title>
   
 
 
@@ -151,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,190 +260,52 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>Vue<small>Tag</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/lanyangliu/lanyangliu.io/2019/07/06/nodejs fs模块/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lanyangliu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/lanyangliu.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="刘兰阳">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">fs模块</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/lanyangliu.io/2019/07/16/图书管理案例（Vue）/" itemprop="url">
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span itemprop="name">图书管理案例</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-06T21:08:35+08:00">
-                2019-07-06
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-07-16T20:48:31+08:00" content="2019-07-16">
+          07-16
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>概述：nodejs fs模块（文件模块） 读取，删除，追加，删除文件等等</p>
-<a id="more"></a>
-
-<p>const fs=require(“fs”)<br>1、fs.stat  检查是文件还是目录（目录 文件是否存在）<br>fs.stat(“要检测的目标”，（err，stas）=&gt;{<br>})</p>
-<p>2、fs.mkdir  创建目录<br>fs.mkdir(“要创建的目录名称”，err=&gt;{<br>}）</p>
-<p>3、fs.writeFile  写入文件<br>fs.writeFile(“要写入的文件名”,“要写入的内容”,”utf-8”,err=&gt;{<br>})</p>
-<p>4、fs.appendFile  追加文件<br>fs.appendFile(“要追加的文件”，“要写入的内容”，err=&gt;{<br>})</p>
-<p>5、fs.readFile  读取文件<br>fs.readFile(“要读取的文件”，（err，data）=&gt;{<br>})</p>
-<p>6、fs.readdir 读取目录下第一级内容 把目录下面的文件和文件夹都获取到<br>fs.readdir(“要读取的目录”，（err,data）=&gt;{<br>})</p>
-<p>7、fs.rename  重命名  1.改名  2.剪切文件（移动）<br>fs.rename(‘html/index.html’,’html/news.html’,err=&gt;{<br>})</p>
-<p>8、fs.rmdir  删除目录   rmdir 这个方法智能删除目录，不能删除文件<br>fs.rmdir(“要删除的目录”,err=&gt;{<br>})</p>
-<p>9、fs.unlink删除文件<br>fs.unlink(“要删除的文件”,err=&gt;{<br>})</p>
-<ol start="10">
-<li>fs.createReadStream  //从文件流中读取数据，读取的文件比较大时建议用流的方式读取，文件比较大会多次读取。 </li>
-</ol>
-<p>var fileReadStream = fs.createReadStream( ‘data1.json’);</p>
-<p>var str = ‘’;</p>
-<p>fileReadStream.on(‘data’, (data) =&gt; {<br>    console.log(“接收到” + data.length);  //文件比较大时，会多次读取，多次执行该回调函数  </p>
-<p>str += data;<br>})<br>fileReadStream.on(‘end’, () =&gt; {<br>    console.log(“ — 结束 —“);</p>
-<p>console.log( str );<br>})<br>fileReadStream.on(‘error’, (error) =&gt; {<br>    console.log(error)<br>})</p>
-<ol start="11">
-<li>fs.createWriteStream  写入文件流  </li>
-</ol>
-<p>var fs = require(“fs”);<br>var data  = “我是从数据库获取的数据，我要保存起来”;</p>
-<p>var writerStream = fs.createWriteStream(‘output.txt’);</p>
-<p>writerStream.write( data , ‘UTF8’ );</p>
-<p>writerStream.end();  //标记文件末尾  结束写入流，释放资源  </p>
-<p>writerStream.on( ‘finish’,  function() {<br>    console.log(“写入完成。”);<br>});</p>
-<p>writerStream.on( ‘error’,  function(error){<br>    console.log(error.stack);<br>});<br>console.log(“程序执行完毕”);</p>
-<ol start="12">
-<li>pipe 管道流  </li>
-</ol>
-<p>var fs = require(“fs”);<br>var readerStream = fs.createReadStream( ‘input.txt’);</p>
-<p>var writerStream = fs.createWriteStream( ‘output.txt’);</p>
-<p>readerStream.pipe( writerStream );<br>console.log(“程序执行完毕”);</p>
-<ol start="13">
-<li>fs.access  //判断目录、文件是否存在(读写权限)</li>
-</ol>
-<p>var  fs = require(‘fs’);</p>
-<p>fs.access(‘package.json’,(err)=&gt;{<br>    console.log(err ?  ‘目录/文件不存在’: ‘文件存在,可以进行读写’);<br>});</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/lanyangliu.io/tags/nodejs/" rel="tag"><i class="fa fa-tag"></i> nodejs</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/lanyangliu.io/2019/07/06/动态创建表格/" rel="next" title="动态创建表格">
-                <i class="fa fa-chevron-left"></i> 动态创建表格
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/lanyangliu.io/2019/07/07/表格隔行变色/" rel="prev" title="表格隔行变色">
-                表格隔行变色 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -456,10 +313,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -703,10 +556,6 @@
 
 
   
-  <script type="text/javascript" src="/lanyangliu.io/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/lanyangliu.io/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
